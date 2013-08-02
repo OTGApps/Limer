@@ -14,6 +14,7 @@ Motion::Project::App.setup do |app|
   app.deployment_target = '10.7'
 	app.identifier = 'com.mohawkapps.limer'
 	app.icon = 'Limer.icns'
+	app.frameworks += %w(ScriptingBridge)
 
   app.info_plist['CFBundleDocumentTypes'] = [{
   	'LSApplicationCategoryType' => 'public.app-category.developer-tools'
