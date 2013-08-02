@@ -1,7 +1,5 @@
 class AppDelegate
   def applicationDidFinishLaunching(notification)
-    buildMenu
-    buildWindow
     detect_files_and_launch_sublime
   end
 
@@ -51,8 +49,23 @@ class AppDelegate
 
     workspace = NSWorkspace.sharedWorkspace
     converted = convert_to_urls with_files_folders
-    workspace.openURLs(converted, withAppBundleIdentifier:@sublime_key, options:NSWorkspaceLaunchDefault, additionalEventParamDescriptor:nil, launchIdentifiers:nil)
-    go_kill_yourself
+
+    if contains_limer? converted
+      # Show the main window
+      buildMenu
+      buildWindow
+    else
+      workspace.openURLs(converted, withAppBundleIdentifier:@sublime_key, options:NSWorkspaceLaunchDefault, additionalEventParamDescriptor:nil, launchIdentifiers:nil)
+      go_kill_yourself
+    end
+
+  end
+
+  def contains_limer?(files_folders)
+    files_folders.each do |ff|
+      return true if ff.lastPathComponent == "#{NSBundle.mainBundle.infoDictionary['CFBundleName']}.app"
+    end
+    false
   end
 
   def convert_to_urls(files_folders)
