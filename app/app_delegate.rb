@@ -37,10 +37,10 @@ class AppDelegate
 
   def find_sublime_app
     sublime = SBApplication.applicationWithBundleIdentifier("com.sublimetext.2")
-    @sublime_key = "com.sublimetext.2"
+    @sublime_key = "com.sublimetext.3"
     if !sublime
       sublime = SBApplication.applicationWithBundleIdentifier("com.sublimetext.3")
-      @sublime_key = "com.sublimetext.3"
+      @sublime_key = "com.sublimetext.2"
     end
     sublime
   end
