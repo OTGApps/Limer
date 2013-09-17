@@ -4,16 +4,26 @@ class AppDelegate
   end
 
   def buildWindow
-    @mainWindow = NSWindow.alloc.initWithContentRect([[240, 180], [480, 360]],
-      styleMask: NSTitledWindowMask|NSClosableWindowMask|NSMiniaturizableWindowMask|NSResizableWindowMask,
-      backing: NSBackingStoreBuffered,
-      defer: false)
-    @mainWindow.title = NSBundle.mainBundle.infoDictionary['CFBundleName']
-    @mainWindow.orderFrontRegardless
+    @mainWindowController = MainWindow.alloc.initWithWindowNibName('MainWindow')
+    @mainWindowController.window.makeKeyAndOrderFront(self)
+    # @mainWindow = NSWindow.alloc.initWithContentRect([[240, 180], [480, 360]],
+    #   styleMask: NSTitledWindowMask|NSClosableWindowMask,
+    #   backing: NSBackingStoreBuffered,
+    #   defer: false)
+    # @mainWindow.title = NSBundle.mainBundle.infoDictionary['CFBundleName']
+    # @mainWindow.orderFrontRegardless
+
+    # instructions = NSImage.imageNamed("Instructions")
+    # imageView = NSImageView.alloc.initWithFrame([[0,0],[480,360]])
+    # imageView.setImage(instructions)
+    # @mainWindow.contentView.addSubview(imageView)
+    # imageView.setBounds(NSMakeRect(0, 0, 256, 256))
   end
 
   def detect_files_and_launch_sublime
     finder = SBApplication.applicationWithBundleIdentifier("com.apple.Finder")
+    NSLog("Found Finder: %@", finder)
+
     @sublime = find_sublime_app
 
     unless @sublime
@@ -22,10 +32,12 @@ class AppDelegate
 
     if finder.isRunning
       selection = finder.selection.get
+      NSLog("Selected: %@", selection)
 
       if selection.count <= 0
         # Nothing is selected in Finder, get the topmost window's path.
         selection = [finder.windows.arrayByApplyingSelector("target").first]
+        NSLog("Selected Path: %@", selection)
       end
 
       open_sublime selection
@@ -89,4 +101,9 @@ class AppDelegate
     # It doesn't get better.
     NSApplication.sharedApplication.terminate(nil)
   end
+
+  def applicationShouldTerminateAfterLastWindowClosed(app)
+    true
+  end
+
 end
