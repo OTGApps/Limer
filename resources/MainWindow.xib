@@ -42,7 +42,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{397, 159}, {696, 535}}</string>
 				<int key="NSWTFlags">544735232</int>
-				<string key="NSWindowTitle">Window</string>
+				<string key="NSWindowTitle">Limer - Installation</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -138,7 +138,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="1022485031">
 								<int key="NSCellFlags">603979776</int>
 								<int key="NSCellFlags2">272629760</int>
-								<string key="NSContents">Close this window and drag the Limer app to the Finder window's toolbar and drop it there. Then navigate to any folder and press the toolbar button to open the folder in Sublime!</string>
+								<string key="NSContents">Close this window and drag the Limer app to the Finder window's toolbar and drop it there. Then navigate to any folder and click the toolbar button to open in Sublime!</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -151,7 +151,7 @@
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 							<bool key="NSControlAutosetMaxLayoutWidth">YES</bool>
-							<double key="NSPreferredMaxLayoutWidth">90</double>
+							<double key="NSPreferredMaxLayoutWidth">656</double>
 						</object>
 					</array>
 					<string key="NSFrameSize">{696, 535}</string>

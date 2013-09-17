@@ -6,18 +6,7 @@ class AppDelegate
   def buildWindow
     @mainWindowController = MainWindow.alloc.initWithWindowNibName('MainWindow')
     @mainWindowController.window.makeKeyAndOrderFront(self)
-    # @mainWindow = NSWindow.alloc.initWithContentRect([[240, 180], [480, 360]],
-    #   styleMask: NSTitledWindowMask|NSClosableWindowMask,
-    #   backing: NSBackingStoreBuffered,
-    #   defer: false)
-    # @mainWindow.title = NSBundle.mainBundle.infoDictionary['CFBundleName']
-    # @mainWindow.orderFrontRegardless
-
-    # instructions = NSImage.imageNamed("Instructions")
-    # imageView = NSImageView.alloc.initWithFrame([[0,0],[480,360]])
-    # imageView.setImage(instructions)
-    # @mainWindow.contentView.addSubview(imageView)
-    # imageView.setBounds(NSMakeRect(0, 0, 256, 256))
+    @mainWindow.orderFrontRegardless
   end
 
   def detect_files_and_launch_sublime
