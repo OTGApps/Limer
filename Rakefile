@@ -21,9 +21,9 @@ Motion::Project::App.setup do |app|
 	app.icon = 'Limer.icns'
 	app.frameworks += %w(ScriptingBridge)
   app.category = 'developer-tools'
+  app.entitlements['com.apple.security.app-sandbox'] = true
 
   app.release do
-    app.entitlements['com.apple.security.app-sandbox'] = true
     app.codesign_certificate = "3rd Party Mac Developer Application: Mohawk Apps, LLC (DW9QQZR4ZL)"
   end
 
