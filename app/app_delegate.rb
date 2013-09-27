@@ -6,7 +6,6 @@ class AppDelegate
   def buildWindow
     @mainWindowController = MainWindow.alloc.initWithWindowNibName('MainWindow')
     @mainWindowController.window.makeKeyAndOrderFront(self)
-    @mainWindow.orderFrontRegardless
   end
 
   def detect_files_and_launch_sublime
