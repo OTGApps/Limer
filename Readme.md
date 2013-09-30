@@ -15,7 +15,8 @@ You can get the app one of two ways:
 2. Purchase it from the Mac App Store:
 
 [![image](http://ax.phobos.apple.com.edgesuite.net/images/web/linkmaker/badge_appstore-lrg.gif)](https://itunes.apple.com/us/app/limer/id709514674?mt=12&at=10l4yY
-)
+)  
+* Note: if the link above doesn't work, its becuase the application is still in review at Apple.
 
 ##Screenshots
 
