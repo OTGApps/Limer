@@ -23,4 +23,4 @@ You can get the app one of two ways:
 [![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/1.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/1.png)
 [![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/2.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/2.png)
 [![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/3.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/3.png)
-[![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/4.png)](https://raw.github.com/MohawkApps/Limer/marketing/master/Screenshots/1.0.0/4.png)
+[![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/4.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/4.png)
