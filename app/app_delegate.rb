@@ -9,23 +9,25 @@ class AppDelegate
   end
 
   def detect_files_and_launch_sublime
-    finder = SBApplication.applicationWithBundleIdentifier("com.apple.Finder")
-    # NSLog("Found Finder: %@", finder)
+    NSLog("Found Finder: %@", finder)
 
     @sublime = find_sublime_app
 
-    unless @sublime
-      alert "Can't Find Sublime Text", "It looks like Sublime Text isn't installed on your computer.", true
-    end
+    alert("Can't Find Sublime Text", "It looks like Sublime Text isn't installed on your computer.", true) unless @sublime
 
     if finder.isRunning
+      NSLog("Finder is running")
+      NSLog("Selection: %@", finder.selection);
+      NSLog("Selection Methods: %@", finder.selection.methods);
+
       selection = finder.selection.get
       NSLog("Limer Selected: %@", selection)
+      alert("Well, Shoot!", "There was a problem getting the selected files from Finder. Sandboxing problem, perhaps?", "true") if selection.nil?
 
       if selection.count <= 0
         # Nothing is selected in Finder, get the topmost window's path.
         selection = [finder.windows.arrayByApplyingSelector("target").first]
-        # NSLog("Selected Path: %@", selection)
+        NSLog("Selected Path: %@", selection)
       end
 
       open_sublime selection
@@ -34,12 +36,19 @@ class AppDelegate
     end
   end
 
+  def finder
+    @finder ||= SBApplication.applicationWithBundleIdentifier("com.apple.Finder")
+  end
+
   def find_sublime_app
-    sublime = SBApplication.applicationWithBundleIdentifier("com.sublimetext.3")
-    @sublime_key = "com.sublimetext.3"
+    two = "com.sublimetext.2"
+    three = "com.sublimetext.3"
+
+    sublime = SBApplication.applicationWithBundleIdentifier(three)
+    @sublime_key = three
     if !sublime
-      sublime = SBApplication.applicationWithBundleIdentifier("com.sublimetext.2")
-      @sublime_key = "com.sublimetext.2"
+      sublime = SBApplication.applicationWithBundleIdentifier(two)
+      @sublime_key = two
     end
     sublime
   end
