@@ -55,7 +55,7 @@ class AppDelegate
     workspace = NSWorkspace.sharedWorkspace
     converted = convert_to_urls with_files_folders
 
-    if contains_limer? converted
+    if show_user_interface? converted
       # Show the main window
       buildMenu
       buildWindow
@@ -64,6 +64,21 @@ class AppDelegate
       go_kill_yourself
     end
 
+  end
+
+  def show_user_interface?(files_folders)
+    first_launch? || contains_limer?(files_folders)
+  end
+
+  def first_launch?
+    first_launch = App::Persistence['launched_limer_before']
+
+    if first_launch != true
+      App::Persistence['launched_limer_before'] = true
+      true
+    else
+      false
+    end
   end
 
   def contains_limer?(files_folders)
