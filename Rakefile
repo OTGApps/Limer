@@ -22,18 +22,11 @@ Motion::Project::App.setup do |app|
 	app.frameworks += %w(ScriptingBridge)
   app.category = 'developer-tools'
   app.entitlements['com.apple.security.app-sandbox'] = true
+  # Can't use scripting targets yet since Finder.app doesn't have any scripting access groups defined yet :(
   app.entitlements['com.apple.security.temporary-exception.apple-events'] = [
     "com.apple.finder"
   ]
 
-  # Can't use scripting targets yet since Finder.app doesn't have any scripting access groups defined yet :(
-  # app.entitlements['com.apple.security.scripting-targets'] = {
-  #   "com.apple.finder" => [
-  #     "com.apple.finder.selection.get"
-  #   ],
-  #   "com.sublimetext.2" => [],
-  #   "com.sublimetext.3" => []
-  # }
 
   app.release do
     app.codesign_certificate = "3rd Party Mac Developer Application: Mohawk Apps, LLC (DW9QQZR4ZL)"
