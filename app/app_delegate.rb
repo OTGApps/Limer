@@ -16,10 +16,6 @@ class AppDelegate
     alert("Can't Find Sublime Text", "It looks like Sublime Text isn't installed on your computer.", true) unless @sublime
 
     if finder.isRunning
-      NSLog("Finder is running")
-      NSLog("Selection: %@", finder.selection);
-      NSLog("Selection Methods: %@", finder.selection.methods);
-
       selection = finder.selection.get
       NSLog("Limer Selected: %@", selection)
       alert("Well, Shoot!", "There was a problem getting the selected files from Finder. Sandboxing problem, perhaps?", "true") if selection.nil?
