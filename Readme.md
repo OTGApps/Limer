@@ -3,9 +3,13 @@
 
 ![](https://raw.github.com/MohawkApps/Limer/master/art/Limer.iconset/icon_256x256.png)
 
-This is the complete source code for the RubyMotion app Limer, available in the App Store.
+This is the complete source code for the RubyMotion app Limer.
 
 This project is open source under the MIT license (see *License* file).
+
+## What does it do?
+
+Check out the app's [description on my website](http://www.mohawkapps.com/app/limer/)!
 
 ## Getting it
 
