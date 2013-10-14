@@ -24,3 +24,6 @@ You can get the app one of two ways:
 [![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/2.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/2.png)
 [![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/3.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/3.png)
 [![](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/small/4.png)](https://raw.github.com/MohawkApps/Limer/master/marketing/Screenshots/1.0.0/4.png)
+
+---
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/MohawkApps/limer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
